@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>visitorlogix</artifactId>
+    <groupId>dev.davidky</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bootstrap</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>dev.davidky</groupId>
+      <artifactId>domain</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>dev.davidky</groupId>
+      <artifactId>application</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>dev.davidky</groupId>
+      <artifactId>infrastructure</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>dev.davidky</groupId>
+      <artifactId>interfaces</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy-jackson</artifactId>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-maven-plugin</artifactId>
+        <version>${quarkus-plateform.version}</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
